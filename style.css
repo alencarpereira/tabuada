@@ -1,0 +1,125 @@
+body,
+html {
+    font-family: 'Arial', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+#fundoPreto,
+#player {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+#fundoPreto {
+    background-color: black;
+    z-index: -2;
+}
+
+#player {
+    z-index: -1;
+    pointer-events: none;
+}
+
+
+
+/* Conteúdo do quiz */
+.container {
+    background: rgba(255, 255, 255, 0.8);
+    /* Fundo semitransparente */
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+h1 {
+    color: #ff595e;
+}
+
+#pergunta {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.opcoes {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+button {
+    padding: 10px;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: #1982c4;
+    color: white;
+}
+
+button:hover {
+    background-color: #6a4c93;
+}
+
+#feedback {
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+#pontuacao {
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+/* Botão para ativar o som */
+#ativarSom {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;
+    background-color: #1982c4;
+    color: white;
+    cursor: pointer;
+    z-index: 2;
+}
+
+#ativarSom:hover {
+    background-color: #6a4c93;
+}
+
+@media (max-width: 768px) {
+
+    .container {
+        width: 17rem;
+    }
+}
+
+@media (max-width: 768px) and (orientation: landscape) {
+
+    html,
+    body {
+        overflow: auto;
+    }
+
+    .container {
+        width: 18rem;
+        height: 22rem;
+        margin-bottom: 20px;
+    }
+}
